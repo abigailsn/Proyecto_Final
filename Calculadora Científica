@@ -1,0 +1,188 @@
+#include <stdio.h>    //libreria para utilizar printf, scanf
+#include <math.h>    //libreria para utilizar funciones matematicas
+#include <stdlib.h> //libreria para utilizar instrucciones del sistema
+
+int main()
+{
+	float suma, resta, multiplicacion, division, tangente, logaritmo, coseno, cubo, raiz, seno, exponente;//float se utiliza para numeros decimales
+	int x;
+    char resp;
+    float op,n1,n2;
+
+    do{
+         printf("|                                             |\n");
+         printf("|   UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO   |\n");
+         printf("|                                             |\n");
+         printf("|           Facultad de Ingenieria            |\n");
+         printf("|           Ingenieria Industrial             |\n");
+         printf("|                                             |\n");
+         printf("|         SAMPAYO NAVARRETE ABIGAIL           |\n");
+         printf("|                                             |\n");
+         printf("|                                             |\n");
+         printf("|    Proyecto final, calculadora cientifica   |\n");
+         printf("|                                             |\n");
+         printf("|        Fundamentos de programacion          |\n");
+         printf("|                                             |\n");
+         printf("|                                             |\n");
+         printf("|    Prof. Martinez Quintana Marco Antonio    |\n");
+         printf("|                                             |\n");
+         printf("|              Semestre 2022-1                |\n");
+         printf("|                  Grupo 04                   |\n");
+         printf("|                                             |\n\n\n");
+         
+         
+         
+         printf("      Calculadora Digital   \n\n");
+         printf("1.-  Suma\n");
+         printf("2.-  Resta\n");
+         printf("3.-  Multiplicacion\n");
+         printf("4.-  Division\n\n");
+         printf("5.-  Funcion Exponencial\n");
+         printf("6.-  Raiz cuadrada\n");
+         printf("7.-  Potencia cubica\n");
+         printf("8.-  Seno de teta\n");
+         printf("9.-  Coseno de teta\n");
+         printf("A.-  Tangente de teta\n");
+         printf("B.-  Logaritmo base 10\n\n");
+         printf("0.-  Salir de la calculadora\n\n");
+         printf(" Selecciona la operacion a realizar (Presiona 1,2,3,4,5,6,7,8,9,A,B,0):");
+         scanf("%c",&resp);
+         
+         switch(resp)//Permite seleccionar que hacer en cada opcion
+         {
+         
+         case '1':
+         	  system("cls"); //limpia pantalla
+         	  printf("     Suma     \n\n");
+         	  printf("Escribe dos numeros separados por coma: ");
+	          scanf("%f,%f", &n1,&n2);
+	          suma=n1+n2; //funcion para obtener la suma de dos numeros
+		      printf("La suma de %f y %f es: %.3f\n", n1,n2,suma);
+		      system("pause");
+			  break;
+		
+		 case '2':
+		 	  system("cls");//limpia pantalla
+			  printf("     Resta     \n\n");
+			  printf("Escribe dos numeros separados por coma: ");
+	          scanf("%f,%f", &n1,&n2); 
+	          resta=n1-n2; //fucion para obtener la resta de dos numeros
+			  printf("La resta de %f y %f es: %.3f\n", n1,n2,resta);
+			  system("pause");
+			  break;
+			  
+		 case '3':
+		 	  system("cls");//limpia pantalla
+		 	  printf("     Multiplicacion     \n\n");
+		 	  printf("Escribe dos numeros separados por coma: ");
+	          scanf("%f,%f", &n1,&n2);
+	          multiplicacion=n1*n2; //funcion para obtener la multiplicacion de dos numeros
+		      printf("La multiplicacion de %f y %f es: %.3f\n", n1,n2,multiplicacion);
+		      system("pause");
+			  break;
+		
+		 case '4':
+		 	  system("cls"); //limpia pantalla
+		 	  printf("     Division     \n\n");
+		 	  printf("Escribe dos numeros separados por coma: ");
+	          scanf("%f,%f", &n1,&n2);
+	          division=n1/n2; //funcion para obtener la division de dos numeros
+			  printf("La division de %f y %f es: %.3f\n", n1,n2,division);
+			  system("pause");
+			  break;
+			 
+         	  
+             
+         case '5':
+              system("cls");//limpia pantalla
+              printf("     Funcion exponencial     \n\n");
+              printf("Funcion: exp(x) \n\n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              exponente=exp(x);//libreria math funcion matematica para obtener la funcion exponencial de un numero
+              printf("La exponencial(x)=%d es %.3f\n",x,exponente);
+              system("pause");//libreria stdlib de pausa
+              break;
+              
+         case '6':
+              system("cls");//limpia pantalla
+              printf("     Raiz cuadrada     \n\n");
+              printf("Funcion: RaizCuadrada(x) \n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              raiz=pow(x,0.5);//libreria math funcion matematica para obtener la raíz cuadrada de un número
+              printf("La raiz cuadrada de x=%d es %.3f\n",x,raiz);
+              system("pause");//libreria stdlib de pausa
+              break;
+              
+         case '7':
+              system("cls");//limpia pantalla
+              printf("     Potencia cubica     \n\n");
+              printf("Funcion: x^3 \n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              cubo=pow(x,3);//libreria math funcion matematica para obtener el cubo de un numero
+              printf("El cubo de x=%d es %.3f\n",x,cubo);
+              system("pause");//libreria stdlib de pausa
+              break;
+              
+         case '8':
+              system("cls");//limpia pantalla
+              printf("     Seno de teta     \n\n");
+              printf("Funcion: Sin(x) \n\n");
+              printf("Escribe el valor de teta: ");
+              scanf("%d", &x);
+              seno=sin(x*3.14159/180);//libreria math funcion matematica para obtener el seno de un numero
+              printf("El seno de teta=%d es %.3f\n",x,seno);
+              system("pause");//libreria stdlib de pausa
+              break;
+              
+         case '9':
+              system("cls");//limpia pantalla
+              printf("     Coseno de teta     \n\n");
+              printf("Funcion: cos(x) \n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              coseno=cos(x*3.14159/180);//libreria math funcion matematica para obtener el coseno de un numero
+              printf("El coseno de x=%d es %.3f\n",x,coseno);
+              system("pause");//libreria stdlib de pausa
+              break;
+         
+         case 'A':
+              system("cls");//limpia pantalla
+              printf("     Tangente de teta     \n\n");
+              printf("Funcion: tan(x) \n\n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              tangente=tan(x*3.14159/180);//libreria math funcion matematica para obtener la tangente de un numero
+              printf("La tangente de x=%d es %.3f\n",x,tangente);
+              system("pause");//libreria stdlib de pausa
+              break;
+             
+         case 'B':
+              system("cls");//limpia pantalla
+              printf("     Logaritmo base 10     \n\n");
+              printf("Funcion: log10(x) \n\n");
+              printf("Escribe el valor de x: ");
+              scanf("%d", &x);
+              logaritmo=log10(x);//libreria math funcion matematica para obtener el logaritmo 
+              printf("El logaritmo base 10 de x=%d es %.3f\n",x,logaritmo);
+              system("pause");//libreria stdlib de pausa
+              break;
+             
+              
+         case '0':
+              system("cls");//limpia pantalla
+              printf("                              \n");
+              printf("                              \n");
+              printf("  Programa terminado....\n\n\n");
+              printf("  Proyecto final, calculadora cientifica \n\n");
+              printf("  Sampayo Navarrete Abigail\n\n");
+              printf("  Fundamentos de programacion\n\n");
+              system("  pause");//libreria stdlib de pausa
+        }     //fin de Switch
+              system("cls");//libreria stdlib para limpiar pantalla
+    }         //fin del DO
+        while (resp!='0');                //Do....while repite todo mientras no reciba un cero
+              system("cls");
+}             //fin del programa en lenguaje C++
